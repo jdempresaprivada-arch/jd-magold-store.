@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J D MAGOLD STORE | Joias de Luxo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <h1 class="text-4d">J D MAGOLD STORE</h1>
+    </div>
+    <nav>
+        <a href="#produtos">Coleções</a>
+        <a href="admin.html">Painel Admin</a>
+        <div class="user-area">
+            <button onclick="login()">Login Cliente</button>
+        </div>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Elegância em cada detalhe.</h2>
+    <p>Joias exclusivas para momentos inesquecíveis.</p>
+</section>
+
+<main id="produtos">
+    <h2 class="section-title">Nossas Peças</h2>
+    <div class="grid-produtos" id="lista-produtos">
+        <div class="card-produto">
+            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=400" alt="Anel de Ouro">
+            <h3>Anel Classic Gold</h3>
+            <p class="preco">R$ 1.200,00</p>
+            <button class="btn-comprar">Comprar via PIX/Cartão</button>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-info" id="info-loja">
+        <p>Email: contato@jdmagold.com</p>
+        <p>Endereço: Rua das Joias, 123</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
