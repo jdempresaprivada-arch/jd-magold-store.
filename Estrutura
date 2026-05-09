@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J D MAGOLD STORE | Joias de Luxo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <h1 class="text-4d">J D MAGOLD STORE</h1>
+    </div>
+    <nav>
+        <a href="#produtos">Coleções</a>
+        <a href="admin.html">Painel Admin</a>
+        <div class="user-area">
+            <button onclick="login()">Login Cliente</button>
+        </div>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Elegância em cada detalhe.</h2>
+    <p>Joias exclusivas para momentos inesquecíveis.</p>
+</section>
+
+<main id="produtos">
+    <h2 class="section-title">Nossas Peças</h2>
+    <div class="grid-produtos" id="lista-produtos">
+        <div class="card-produto">
+            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=400" alt="Anel de Ouro">
+            <h3>Anel Classic Gold</h3>
+            <p class="preco">R$ 1.200,00</p>
+            <button class="btn-comprar">Comprar via PIX/Cartão</button>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-info" id="info-loja">
+        <p>Email: contato@jdmagold.com</p>
+        <p>Endereço: Rua das Joias, 123</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+:root {
+    --gold: #d4af37;
+    --dark: #1a1a1a;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+    color: var(--dark);
+}
+
+/* Efeito 4D na Logo */
+.text-4d {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    text-shadow: 
+        1px 1px 0px #b8922f,
+        2px 2px 0px #a17f28,
+        3px 3px 0px #8a6d22,
+        4px 4px 5px rgba(0,0,0,0.5);
+    letter-spacing: 5px;
+}
+
+header {
+    background: var(--dark);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&q=80&w=1200');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 50px;
+}
+
+.card-produto {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card-produto:hover { transform: translateY(-10px); }
+
+.btn-comprar {
+    background: var(--gold);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+<div class="admin-panel">
+    <h2>Painel J D MAGOLD - Acesso Restrito</h2>
+    <input type="password" id="pass" placeholder="Senha do Administrador">
+    <hr>
+    <h3>Cadastrar Novo Produto</h3>
+    <input type="text" placeholder="Nome do Produto">
+    <input type="number" placeholder="Preço">
+    <input type="file" accept="image/*">
+    <button>Adicionar à Loja</button>
+    
+    <h3>Configurações da Loja</h3>
+    <input type="text" placeholder="Chave PIX">
+    <input type="text" placeholder="Endereço">
+    <button>Salvar Alterações</button>
+</div>
